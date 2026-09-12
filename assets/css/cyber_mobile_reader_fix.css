@@ -1,0 +1,105 @@
+/* =========================================================
+   CYBER HEROES — MOBILE COMIC READER OPTIMIZATION
+   Add this AFTER style.css
+   ========================================================= */
+
+@media (max-width: 620px) {
+
+    /* Give the reader more horizontal space on phones */
+    .story-reader.section-shell {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* Compact toolbar */
+    .reader-toolbar {
+        margin-top: 18px;
+        margin-bottom: 10px;
+        padding: 7px;
+        gap: 6px;
+        overflow-x: auto;
+        justify-content: center;
+    }
+
+    .reader-tool-group {
+        gap: 5px;
+        flex-shrink: 0;
+    }
+
+    .reader-toolbar button {
+        min-width: 40px;
+        min-height: 40px;
+        padding: 0 9px;
+    }
+
+    .zoom-mode-button {
+        min-width: 58px !important;
+    }
+
+    .zoom-mode-button .zoom-icon {
+        font-size: 17px;
+    }
+
+    .zoom-value {
+        min-width: 48px;
+    }
+
+    /* Reader should wrap tightly around the comic instead of
+       taking most of the phone screen height. */
+    .comic-viewer {
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        padding: 6px !important;
+        overflow: hidden;
+        align-items: center !important;
+    }
+
+    .comic-stage {
+        width: 100%;
+    }
+
+    .comic-canvas {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /* JS controls the exact image size at 100% zoom.
+       This only improves the surrounding layout. */
+    .comic-page-image {
+        max-width: 100% !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+
+    /* Story arrows stay easy to tap without covering too much of
+       the comic. */
+    .stage-arrow {
+        width: 42px;
+        height: 42px;
+        font-size: 29px;
+        top: 50%;
+    }
+
+    .stage-prev {
+        left: 4px;
+    }
+
+    .stage-next {
+        right: 4px;
+    }
+
+    .reader-status {
+        margin-top: 9px;
+        font-size: 12px;
+    }
+
+    /* Keep the existing fullscreen experience unchanged. */
+    .comic-viewer:fullscreen,
+    .comic-viewer.is-fullscreen {
+        width: 100vw !important;
+        height: 100vh !important;
+        min-height: 100vh !important;
+        max-height: none !important;
+        padding: 10px !important;
+    }
+}
